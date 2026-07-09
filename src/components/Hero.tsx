@@ -28,7 +28,7 @@ export function Hero() {
               </span>
             ))}
           </div>
-          <h1 className="mt-6 text-[clamp(40px,6.5vw,76px)] leading-[1.2] font-black tracking-[0.01em] text-ink">
+          <h1 className="mt-6 text-[clamp(56px,6.5vw,76px)] leading-[1.2] font-black tracking-[0.01em] text-ink">
             弾道が、
             <br />
             <span className="text-primary">見える。</span>

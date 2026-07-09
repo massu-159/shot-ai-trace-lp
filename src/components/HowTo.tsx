@@ -16,11 +16,11 @@ export function HowTo() {
             <span className="font-mono text-[10px] text-[#8a938c] md:hidden">← スワイプ</span>
           </div>
         </div>
-        <div className="mt-[clamp(20px,4vw,44px)] flex gap-3 overflow-x-auto px-5 pb-1.5 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-12 md:pb-0">
+        <div className="mt-[clamp(20px,4vw,44px)] flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-1.5 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-12 md:pb-0">
           {steps.map((step) => (
             <div
               key={step.label}
-              className="w-60 flex-none rounded-[18px] bg-step p-[clamp(20px,2.5vw,30px)] md:w-auto"
+              className="w-60 flex-none snap-start scroll-ml-5 rounded-[18px] bg-step p-[clamp(20px,2.5vw,30px)] md:w-auto"
             >
               <div className="font-display text-[clamp(12px,1.2vw,14px)] font-bold text-primary">
                 {step.label}
