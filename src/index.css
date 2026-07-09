@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Noto Sans JP", system-ui, sans-serif;
+
+  /* デザイントークン（design/template.html の使用色） */
+  --color-ink: #14201a;
+  --color-muted: #5b6862;
+  --color-primary: #0e8a45;
+  --color-primary-dark: #0a6b36;
+  --color-line: #e4e9e4;
+  --color-line-soft: #eef1ee;
+  --color-mint: #dff0e3;
+  --color-moss: #2b3a30;
+  --color-clay: #9a6a5b;
+  --color-clay-soft: #f7efec;
+  --color-forest: #0f2417;
+  --color-trace: #00e676;
+  --color-card: #fbfcfa;
+  --color-step: #f2f7f0;
+  --color-plan: #f6faf6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-primary-dark);
+  }
+}
