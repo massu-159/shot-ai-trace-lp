@@ -1,4 +1,5 @@
-import appHome from '../assets/app-home.png'
+import appHome from '../assets/app-home.webp'
+import appPreview from '../assets/app-preview.webp'
 import { AppStoreBadge } from './AppStoreBadge'
 import { Header } from './Header'
 
@@ -59,37 +60,30 @@ export function Hero() {
 
         {/* PC版ビジュアル */}
         <div className="relative hidden h-[600px] md:block">
-          <div className="absolute top-11 left-0 h-[492px] w-[264px] -rotate-4 overflow-hidden rounded-[32px] bg-[repeating-linear-gradient(45deg,#16241a_0_12px,#1c2c20_12px_24px)] shadow-[0_24px_48px_rgba(20,32,26,0.25)]">
-            <svg viewBox="0 0 264 492" className="absolute inset-0 h-full w-full">
-              <path d="M132 452 C 132 300 132 130 208 92" stroke="#00E676" strokeWidth="3.5" fill="none" />
-              <circle cx="208" cy="92" r="6" fill="#00E676" />
-            </svg>
-            <div className="absolute right-0 bottom-[18px] left-0 text-center font-mono text-[10.5px] tracking-[0.06em] text-[#9fb8a5]">
-              書き出し動画（弾道線入り・9:16）
-            </div>
-          </div>
+          <img
+            src={appPreview}
+            alt="弾道線を描画したプレビュー画面"
+            className="absolute top-11 left-0 block w-[264px] -rotate-4 rounded-[48px] shadow-[0_24px_48px_rgba(20,32,26,0.25)]"
+          />
           <img
             src={appHome}
             alt="Shot AI Trace ホーム画面"
-            className="absolute top-0 right-[6px] block w-[280px] rotate-3 rounded-[34px] shadow-[0_30px_60px_rgba(20,32,26,0.32)]"
+            className="absolute top-0 right-[6px] block w-[280px] rotate-3 rounded-[48px] shadow-[0_30px_60px_rgba(20,32,26,0.32)]"
           />
         </div>
 
         {/* モバイル版ビジュアル（フェード＋バッジ重ね） */}
         <div className="relative mt-[22px] h-[400px] overflow-hidden md:hidden">
-          <div className="absolute top-9 left-[46px] h-[280px] w-[150px] -rotate-5 overflow-hidden rounded-[22px] bg-[repeating-linear-gradient(45deg,#16241a_0_10px,#1c2c20_10px_20px)] shadow-[0_18px_36px_rgba(20,32,26,0.25)]">
-            <svg viewBox="0 0 150 280" className="absolute inset-0 h-full w-full">
-              <path d="M75 256 C 75 170 75 76 118 54" stroke="#00E676" strokeWidth="2.5" fill="none" />
-              <circle cx="118" cy="54" r="4" fill="#00E676" />
-            </svg>
-            <div className="absolute right-0 bottom-[10px] left-0 text-center font-mono text-[8px] text-[#9fb8a5]">
-              書き出し動画（9:16）
-            </div>
-          </div>
+          <img
+            src={appPreview}
+            alt="弾道線を描画したプレビュー画面"
+            className="absolute top-9 left-[46px] block w-[150px] -rotate-5 rounded-[22px] shadow-[0_18px_36px_rgba(20,32,26,0.25)]"
+          />
+          {/* rotate-4 で上端が持ち上がるため、overflow-hidden に切られない分の余白を上に取る */}
           <img
             src={appHome}
             alt="Shot AI Trace ホーム画面"
-            className="absolute top-0 right-[52px] block w-[172px] rotate-4 rounded-[22px] shadow-[0_20px_44px_rgba(20,32,26,0.3)]"
+            className="absolute top-2 right-[52px] block w-[172px] rotate-4 rounded-[22px] shadow-[0_20px_44px_rgba(20,32,26,0.3)]"
           />
           <div className="absolute right-0 bottom-0 left-0 h-[120px] bg-[linear-gradient(180deg,rgba(241,246,241,0)_0%,#f1f6f1_78%)]" />
           <div className="absolute right-0 bottom-4 left-0 flex justify-center">
