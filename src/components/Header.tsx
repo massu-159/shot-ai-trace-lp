@@ -29,9 +29,10 @@ export function Header() {
             {item.label}
           </a>
         ))}
+        {/* モバイルは画面下部固定の CTA（MobileCtaBar）があるため md 以上でのみ表示 */}
         <a
           href={APP_STORE_URL}
-          className="inline-flex items-center rounded-full bg-primary px-[18px] py-[9px] text-[12.5px] font-bold text-white hover:text-white"
+          className="hidden items-center rounded-full bg-primary px-[18px] py-[9px] text-[12.5px] font-bold text-white hover:text-white md:inline-flex"
         >
           App Storeで入手
         </a>
