@@ -1,5 +1,6 @@
 import { StrictMode, type ReactNode } from 'react'
 import { createRoot } from 'react-dom/client'
+import logoWhite from '../assets/logo-white.webp'
 import '../index.css'
 
 type Section = {
@@ -16,9 +17,12 @@ function LegalLayout({ title, sections }: Props) {
   return (
     <div className="min-h-screen bg-white">
       <div className="flex items-center justify-between px-5 py-4 md:px-12 md:py-[22px]">
-        <a href="./" className="flex items-center gap-[9px]">
-          <div className="size-[11px] rounded-full bg-[#00C853]" />
-          <span className="font-display text-[18px] font-bold text-ink">Shot AI Trace</span>
+        {/* ヘッダーのロゴ・タイトルはトップページ（Header.tsx）と同じ組。 */}
+        <a href="./" className="flex items-center gap-[10px]">
+          <span className="inline-flex size-9 items-center justify-center rounded-[6px] bg-ink">
+            <img src={logoWhite} alt="" className="size-9" />
+          </span>
+          <span className="font-michroma text-[15px] text-ink">Shot AI Trace</span>
         </a>
         <a href="./" className="text-[13.5px] font-medium text-muted hover:text-muted">
           ← トップへ戻る
