@@ -3,7 +3,7 @@ import { FadeIn } from './FadeIn'
 
 export function Features() {
   return (
-    <div id="features" className="pt-[clamp(56px,8vw,88px)]">
+    <div id="features" className="mx-auto max-w-content pt-[clamp(56px,8vw,88px)]">
       <FadeIn>
         <div className="px-5 text-center md:px-12">
           <div className="font-display text-[clamp(11px,1vw,12px)] font-semibold tracking-[0.16em] text-primary">

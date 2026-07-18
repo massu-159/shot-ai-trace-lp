@@ -82,7 +82,7 @@ export function HowTo() {
   const dragging = pointer.current?.moved ?? false
 
   return (
-    <div id="howto" className="pt-[clamp(56px,8vw,96px)]">
+    <div id="howto" className="mx-auto max-w-content pt-[clamp(56px,8vw,96px)]">
       <FadeIn>
         <div className="px-5 text-center md:px-12">
           <div className="font-display text-[clamp(11px,1vw,12px)] font-semibold tracking-[0.16em] text-primary">

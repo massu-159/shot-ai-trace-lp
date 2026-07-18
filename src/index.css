@@ -32,6 +32,10 @@
   --color-card: #fbfcfa;
   --color-step: #f2f7f0;
   --color-plan: #f6faf6;
+
+  /* PC のコンテンツ最大幅（max-w-content）。ワイド画面でどこまでも伸びないよう
+     デザイン照合済みの PC 幅 1280px で頭打ちにする。背景色は全幅のまま。 */
+  --container-content: 1280px;
 }
 
 @layer base {

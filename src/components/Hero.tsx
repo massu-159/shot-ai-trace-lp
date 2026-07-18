@@ -16,8 +16,9 @@ const mobileChips = ['打球音AI検出', '端末内解析', '無料5回']
 export function Hero() {
   return (
     <div className="bg-[linear-gradient(180deg,#fbfdfb_0%,#f1f6f1_100%)]">
+      {/* 背景は全幅のまま、各行のコンテンツは max-w-content（デザイン照合済みの 1280px）に制限 */}
       <Header />
-      <div className="grid grid-cols-1 gap-0 pt-5 md:grid-cols-[1fr_460px] md:items-center md:gap-10 md:px-12 md:pt-9 md:pb-[72px]">
+      <div className="mx-auto grid max-w-content grid-cols-1 gap-0 pt-5 md:grid-cols-[1fr_460px] md:items-center md:gap-10 md:px-12 md:pt-9 md:pb-[72px]">
         <div className="px-5 text-center md:px-0 md:text-left">
           <div className="hidden gap-2 md:flex">
             {snsBadges.map((label) => (

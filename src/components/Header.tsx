@@ -10,7 +10,7 @@ const navItems = [
 
 export function Header() {
   return (
-    <div className="flex items-center justify-between px-5 py-4 md:px-12 md:py-[22px]">
+    <div className="mx-auto flex max-w-content items-center justify-between px-5 py-4 md:px-12 md:py-[22px]">
       {/* アプリのホーム画面と同じ組（白ロゴ＋Michroma タイトル）。白ロゴは明るい
           背景では見えないため、アプリアイコンと同じ濃色の角丸チップに載せる。 */}
       <div className="flex items-center gap-[10px]">
