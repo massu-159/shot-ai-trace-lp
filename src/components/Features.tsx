@@ -10,7 +10,7 @@ export function Features() {
             WHY SHOT AI TRACE
           </div>
           <h2 className="mt-3.5 text-[clamp(24px,3.3vw,38px)] leading-[1.45] font-black text-ink">
-            弾道トレースアプリの「不満」を、
+            ゴルフ弾道トレーサーアプリの「不満」を、
             <br />
             設計から解決しました。
           </h2>
