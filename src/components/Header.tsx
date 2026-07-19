@@ -1,5 +1,5 @@
 import logoWhite from '../assets/logo-white.webp'
-import { APP_STORE_URL } from '../constants'
+import { APP_STORE_URL, IS_RELEASED } from '../constants'
 
 const navItems = [
   { href: '#features', label: '機能' },
@@ -30,12 +30,18 @@ export function Header() {
           </a>
         ))}
         {/* モバイルは画面下部固定の CTA（MobileCtaBar）があるため md 以上でのみ表示 */}
-        <a
-          href={APP_STORE_URL}
-          className="hidden items-center rounded-full bg-primary px-[18px] py-[9px] text-[12.5px] font-bold text-white hover:text-white md:inline-flex"
-        >
-          App Storeで入手
-        </a>
+        {IS_RELEASED ? (
+          <a
+            href={APP_STORE_URL}
+            className="hidden items-center rounded-full bg-primary px-[18px] py-[9px] text-[12.5px] font-bold text-white hover:text-white md:inline-flex"
+          >
+            App Storeで入手
+          </a>
+        ) : (
+          <span className="hidden items-center rounded-full bg-line px-[18px] py-[9px] text-[12.5px] font-bold text-muted md:inline-flex">
+            Coming Soon（近日公開）
+          </span>
+        )}
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import { APP_STORE_URL } from '../constants'
+import { APP_STORE_URL, IS_RELEASED } from '../constants'
 import { plans } from '../data/plans'
 import { FadeIn } from './FadeIn'
 
@@ -52,16 +52,26 @@ export function Pricing() {
                   <span key={item}>{item}</span>
                 ))}
               </div>
-              <a
-                href={APP_STORE_URL}
-                className={`mt-7 inline-flex justify-center rounded-xl text-[14px] font-bold ${
-                  plan.recommended
-                    ? 'bg-primary py-3.5 text-white hover:text-white'
-                    : 'border-[1.5px] border-ink py-[13px] text-ink hover:text-ink'
-                }`}
-              >
-                {plan.cta}
-              </a>
+              {IS_RELEASED ? (
+                <a
+                  href={APP_STORE_URL}
+                  className={`mt-7 inline-flex justify-center rounded-xl text-[14px] font-bold ${
+                    plan.recommended
+                      ? 'bg-primary py-3.5 text-white hover:text-white'
+                      : 'border-[1.5px] border-ink py-[13px] text-ink hover:text-ink'
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+              ) : (
+                <span
+                  className={`mt-7 inline-flex justify-center rounded-xl text-[14px] font-bold text-muted ${
+                    plan.recommended ? 'bg-line py-3.5' : 'border-[1.5px] border-line py-[13px]'
+                  }`}
+                >
+                  Coming Soon（近日公開）
+                </span>
+              )}
             </div>
           ))}
         </div>

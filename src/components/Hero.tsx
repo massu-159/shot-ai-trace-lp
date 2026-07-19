@@ -1,5 +1,6 @@
 import appHome from '../assets/app-home.webp'
 import appPreview from '../assets/app-preview.webp'
+import { INSTAGRAM_URL, IS_RELEASED } from '../constants'
 import { AppStoreBadge } from './AppStoreBadge'
 import { Header } from './Header'
 
@@ -57,6 +58,21 @@ export function Hero() {
               料金を見る
             </a>
           </div>
+          {/* リリース前のみ: フォロー導線（リリース後は DL 導線に集約する） */}
+          {!IS_RELEASED && (
+            <p className="mt-4 hidden text-[13px] text-muted md:block">
+              最新情報は{' '}
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold underline"
+              >
+                Instagram
+              </a>{' '}
+              で
+            </p>
+          )}
         </div>
 
         {/* PC版ビジュアル */}
@@ -87,11 +103,21 @@ export function Hero() {
             className="absolute top-2 right-[52px] block w-[172px] rotate-4 rounded-[22px] shadow-[0_20px_44px_rgba(20,32,26,0.3)]"
           />
           <div className="absolute right-0 bottom-0 left-0 h-[120px] bg-[linear-gradient(180deg,rgba(241,246,241,0)_0%,#f1f6f1_78%)]" />
-          <div className="absolute right-0 bottom-4 left-0 flex justify-center">
+          <div className="absolute right-0 bottom-4 left-0 flex flex-col items-center gap-2">
             <AppStoreBadge
               variant="dark"
               className="px-[30px] shadow-[0_12px_28px_rgba(20,32,26,0.3)]"
             />
+            {!IS_RELEASED && (
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[12px] font-bold text-moss underline"
+              >
+                最新情報は Instagram で
+              </a>
+            )}
           </div>
         </div>
       </div>

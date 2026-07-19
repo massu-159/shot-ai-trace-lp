@@ -1,3 +1,4 @@
+import { INSTAGRAM_URL, IS_RELEASED } from '../constants'
 import { AppStoreBadge } from './AppStoreBadge'
 import { FadeIn } from './FadeIn'
 
@@ -22,6 +23,20 @@ export function FooterCta() {
         <div className="mt-[clamp(20px,2.6vw,30px)] flex justify-center">
           <AppStoreBadge variant="light" />
         </div>
+        {!IS_RELEASED && (
+          <p className="mt-4 text-[13px] text-[#a8bfae]">
+            最新情報は{' '}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-white underline hover:text-white"
+            >
+              Instagram
+            </a>{' '}
+            で
+          </p>
+        )}
         <div className="mt-[clamp(30px,4.5vw,52px)] flex flex-wrap justify-center gap-[clamp(14px,2.4vw,28px)] text-[clamp(11px,1.1vw,12.5px)] text-[#7d9484]">
           {legalLinks.map((link) => (
             <a key={link.href} href={link.href} className="text-[#7d9484] hover:text-white">
