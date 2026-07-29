@@ -7,7 +7,7 @@
     <title>Shot AI Trace — 弾道が、見える。| ゴルフ弾道を自動描画するショットトレーサーアプリ</title>
     <meta
       name="description"
-      content="ゴルフのスイング動画に弾道線を自動描画するiPhone向けショットトレーサーアプリ。撮った縦動画を選ぶだけで、AIが打球音からインパクトを検出。三脚なしの手持ち撮影にも対応し、そのままの画角・そのままの画質でSNSに投稿できます。無料で5回書き出せます。"
+      content="ゴルフのスイング動画に弾道線を自動描画するiPhone向けショットトレーサーアプリ。撮った動画を選ぶだけで、AIが打球音からインパクトを検出。三脚なしの手持ち撮影にも対応し、そのままの画角・そのままの画質でSNSに投稿できます。無料で5回書き出せます。"
     />
     <link rel="canonical" href="https://massu-159.github.io/shot-ai-trace-lp/" />
     <link rel="icon" type="image/png" href="/src/assets/favicon.png" />
@@ -20,7 +20,7 @@
     />
     <meta
       property="og:description"
-      content="ゴルフのスイング動画に弾道線を自動描画するiPhone向けショットトレーサーアプリ。撮った縦動画を選ぶだけで、AIが打球音からインパクトを検出し、三脚なしの手持ち撮影にも対応。"
+      content="ゴルフのスイング動画に弾道線を自動描画するiPhone向けショットトレーサーアプリ。撮った動画を選ぶだけで、AIが打球音からインパクトを検出し、三脚なしの手持ち撮影にも対応。"
     />
     <meta property="og:url" content="https://massu-159.github.io/shot-ai-trace-lp/" />
     <meta property="og:image" content="https://massu-159.github.io/shot-ai-trace-lp/ogp.jpg" />
@@ -48,7 +48,7 @@
           {
             "@type": "MobileApplication",
             "name": "Shot AI Trace",
-            "description": "ゴルフのスイング動画に弾道線を自動描画するiPhone向けショットトレーサーアプリ。撮った縦動画を選ぶだけで、AIが打球音からインパクトを検出。三脚なしの手持ち撮影にも対応し、そのままの画角・そのままの画質でSNSに投稿できます。",
+            "description": "ゴルフのスイング動画に弾道線を自動描画するiPhone向けショットトレーサーアプリ。撮った動画を選ぶだけで、AIが打球音からインパクトを検出。三脚なしの手持ち撮影にも対応し、そのままの画角・そのままの画質でSNSに投稿できます。",
             "applicationCategory": "SportsApplication",
             "operatingSystem": "iOS",
             "inLanguage": "ja",
@@ -78,7 +78,15 @@
                 "name": "どんな動画が対象ですか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "縦向きで撮影した、打球音の入った音声付き動画です。長さ30秒以内・200MB以下、画質はHD〜4Kに対応しています。"
+                  "text": "打球音の入った音声付きのスイング動画です。縦向き・横向きのどちらにも対応。長さ30秒以内・200MB以下、画質はHD〜4Kに対応しています。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "横向きで撮影した動画も使えますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "はい。バージョン1.2から横向き（ランドスケープ）動画に対応しました。縦向きと同じように解析・編集・書き出しができます。"
                 }
               },
               {
