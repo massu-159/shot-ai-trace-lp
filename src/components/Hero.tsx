@@ -37,7 +37,7 @@ export function Hero() {
             <span className="text-primary">見える。</span>
           </h1>
           <p className="mx-auto mt-4 max-w-[480px] text-[clamp(13px,1.4vw,16px)] leading-[1.9] text-pretty text-muted md:mx-0">
-            撮った縦動画を選ぶだけで、AIが打球音からインパクトを検出し、弾道線を自動で描画。そのままの画角・そのままの画質でSNSに投稿できます。
+            撮った動画を選ぶだけで、AIが打球音からインパクトを検出し、弾道線を自動で描画。そのままの画角・そのままの画質でSNSに投稿できます。
           </p>
           <div className="mt-[26px] hidden flex-col gap-3 md:flex">
             {checkPoints.map((text) => (
