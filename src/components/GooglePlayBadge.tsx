@@ -1,39 +1,27 @@
+import badgeGooglePlay from '../assets/badge-google-play-ja.png'
 import { GOOGLE_PLAY_URL, IS_RELEASED } from '../constants'
+import { ComingSoonBadge } from './AppStoreBadge'
 
 type Props = {
-  variant: 'dark' | 'light'
+  /** バッジの高さ（App Store と同じ値を渡す。Google の規定で他ストアのバッジ以上の大きさにする）。 */
   className?: string
-  /** 左右の余白。className の px-* は基本の px-[26px] に負けるため、変えるときはこちらで渡す。 */
-  padX?: string
 }
 
-// Google Play バッジ（GET IT ON / Google Play の2段組）。AppStoreBadge と同じ組・配色。
-// リリース前はリンクにせず Coming Soon 表示（IS_RELEASED で自動復帰）。
-export function GooglePlayBadge({ variant, className = '', padX = 'px-[26px]' }: Props) {
-  const colors =
-    variant === 'dark'
-      ? 'bg-[#111512] text-white hover:text-white'
-      : 'bg-white text-ink hover:text-ink'
-  const subColor = variant === 'dark' ? 'text-[#9aa89e]' : 'text-[#7d8a80]'
-  const base = `inline-flex flex-col items-start rounded-[14px] ${padX} pt-[11px] pb-3 leading-none whitespace-nowrap ${colors} ${className}`
-
+// Google Play 公式バッジ（日本語版「で手に入れよう」。改変禁止）。
+// 画像（646×250）は上下に透明な余白が 29px ずつあり、見えるバッジは高さ 192px 分。
+// リンクの高さ＝見えるバッジの高さにし、画像は 250/192 倍で上下にはみ出させて揃える。
+export function GooglePlayBadge({ className = 'h-11' }: Props) {
   if (!IS_RELEASED) {
-    return (
-      <span className={base}>
-        <span className={`font-display text-[9px] font-semibold tracking-[0.18em] ${subColor}`}>
-          COMING SOON
-        </span>
-        <span className="mt-1 text-[20px] font-bold">近日公開</span>
-      </span>
-    )
+    return <ComingSoonBadge className={className} />
   }
 
   return (
-    <a href={GOOGLE_PLAY_URL} className={base}>
-      <span className={`font-display text-[9px] font-semibold tracking-[0.18em] ${subColor}`}>
-        GET IT ON
-      </span>
-      <span className="mt-1 text-[20px] font-bold">Google Play</span>
+    <a href={GOOGLE_PLAY_URL} className={`inline-flex items-center ${className}`}>
+      <img
+        src={badgeGooglePlay}
+        alt="Google Play で手に入れよう"
+        className="h-[130.21%] w-auto max-w-none"
+      />
     </a>
   )
 }

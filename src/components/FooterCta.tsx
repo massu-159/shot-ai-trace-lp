@@ -49,14 +49,14 @@ export function FooterCta() {
           無料で5回書き出せます。登録は不要です。
         </p>
         <div className="mt-[clamp(20px,2.6vw,30px)] flex flex-wrap justify-center gap-2.5 md:gap-10">
-          {/* スマホ幅（〜390px）でも2つ横に並ぶよう、md 未満は左右の余白を詰める */}
+          {/* 320px 幅でも2つ横に並ぶよう、md 未満は間を詰める（Apple の余白規定は狭い場合バッジ高の 1/10） */}
           <StoreColumn
-            badge={<AppStoreBadge variant="light" padX="px-5 md:px-[26px]" />}
+            badge={<AppStoreBadge className="h-11 md:h-[52px]" />}
             qr={qrAppStore}
             store="App Store"
           />
           <StoreColumn
-            badge={<GooglePlayBadge variant="light" padX="px-5 md:px-[26px]" />}
+            badge={<GooglePlayBadge className="h-11 md:h-[52px]" />}
             qr={qrGooglePlay}
             store="Google Play"
           />
@@ -83,6 +83,12 @@ export function FooterCta() {
           ))}
           <span className="text-[#5d7565]">© 2026 Shot AI Trace</span>
         </div>
+        {/* 公式バッジの利用条件にある商標表記（サイト内に1回）。Apple は日本向けの所定書式に従う */}
+        <p className="mx-auto mt-4 max-w-[640px] text-[10.5px] leading-[1.7] text-[#5d7565]">
+          {'Apple、Appleのロゴは、米国およびその他の国で登録されたApple Inc.の商標です。'}
+          {'App Store は Apple Inc. のサービスマークです。'}
+          {'Google Play および Google Play ロゴは Google LLC の商標です。'}
+        </p>
       </FadeIn>
     </div>
   )
