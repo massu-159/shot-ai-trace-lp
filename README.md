@@ -22,10 +22,9 @@ npm run preview  # dist/ をローカル確認
 ## ページ構成
 
 - `index.html` — LP本体（ヒーロー / 機能 / 使い方 / 料金 / FAQ / CTA）
-- `terms.html` / `privacy.html` / `tokushoho.html` — 規約系（文面は準備中の雛形）
+- `terms.html` / `privacy.html` / `tokushoho.html` — 規約系（App Store / Google Play 併記の正式文面）
 
 ## 運用メモ
 
-- App Store リンクは `src/constants.ts` の `APP_STORE_URL`（リリース後に差し替え）
+- ストアリンクは `src/constants.ts` の `APP_STORE_URL` / `GOOGLE_PLAY_URL`（ボタン1つの CTA は `storeForUserAgent` で端末ごとに出し分け）
 - 文言・デザインの正は Claude Design 出力（`design/`、git 管理外）
-- 規約系3ページの文面確定後に `src/legal/*.tsx` を更新する

@@ -3,17 +3,19 @@ import { APP_STORE_URL, IS_RELEASED } from '../constants'
 type Props = {
   variant: 'dark' | 'light'
   className?: string
+  /** 左右の余白。className の px-* は基本の px-[26px] に負けるため、変えるときはこちらで渡す。 */
+  padX?: string
 }
 
 // App Store バッジ（DOWNLOAD ON THE / App Store の2段組）。
 // リリース前はリンクにせず Coming Soon 表示（IS_RELEASED で自動復帰）。
-export function AppStoreBadge({ variant, className = '' }: Props) {
+export function AppStoreBadge({ variant, className = '', padX = 'px-[26px]' }: Props) {
   const colors =
     variant === 'dark'
       ? 'bg-[#111512] text-white hover:text-white'
       : 'bg-white text-ink hover:text-ink'
   const subColor = variant === 'dark' ? 'text-[#9aa89e]' : 'text-[#7d8a80]'
-  const base = `inline-flex flex-col items-start rounded-[14px] px-[26px] pt-[11px] pb-3 leading-none ${colors} ${className}`
+  const base = `inline-flex flex-col items-start rounded-[14px] ${padX} pt-[11px] pb-3 leading-none whitespace-nowrap ${colors} ${className}`
 
   if (!IS_RELEASED) {
     return (

@@ -1,5 +1,6 @@
 import { INSTAGRAM_URL, IS_RELEASED } from '../constants'
 import { AppStoreBadge } from './AppStoreBadge'
+import { GooglePlayBadge } from './GooglePlayBadge'
 import { FadeIn } from './FadeIn'
 
 const legalLinks = [
@@ -10,7 +11,10 @@ const legalLinks = [
 
 export function FooterCta() {
   return (
-    <div className="mt-[clamp(56px,8vw,96px)] bg-forest px-5 py-[clamp(44px,6.5vw,76px)] text-center md:px-12">
+    <div
+      id="download"
+      className="mt-[clamp(56px,8vw,96px)] bg-forest px-5 py-[clamp(44px,6.5vw,76px)] text-center md:px-12"
+    >
       <FadeIn>
         <h2 className="text-[clamp(24px,3.6vw,42px)] leading-[1.45] font-black text-white">
           次のラウンドから、
@@ -20,8 +24,10 @@ export function FooterCta() {
         <p className="mt-4 text-[clamp(13px,1.3vw,15px)] text-[#a8bfae]">
           無料で5回書き出せます。登録は不要です。
         </p>
-        <div className="mt-[clamp(20px,2.6vw,30px)] flex justify-center">
-          <AppStoreBadge variant="light" />
+        <div className="mt-[clamp(20px,2.6vw,30px)] flex flex-wrap justify-center gap-2.5">
+          {/* スマホ幅（〜390px）でも2つ横に並ぶよう、md 未満は左右の余白を詰める */}
+          <AppStoreBadge variant="light" padX="px-5 md:px-[26px]" />
+          <GooglePlayBadge variant="light" padX="px-5 md:px-[26px]" />
         </div>
         {!IS_RELEASED && (
           <p className="mt-4 text-[13px] text-[#a8bfae]">

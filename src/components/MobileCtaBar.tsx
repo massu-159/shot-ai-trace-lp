@@ -1,8 +1,10 @@
-import { APP_STORE_URL, INSTAGRAM_URL, IS_RELEASED } from '../constants'
+import { INSTAGRAM_URL, IS_RELEASED, storeForUserAgent } from '../constants'
 
 // モバイルのみ: 下部固定CTAバー（スペーサ込み）。
 // リリース前は Coming Soon 表示＋Instagram フォロー導線に切り替える。
+// ボタンは閲覧端末に合わせて Google Play（Android）／App Store（それ以外）へ出し分ける。
 export function MobileCtaBar() {
+  const store = storeForUserAgent(navigator.userAgent)
   return (
     <>
       <div className="h-[88px] bg-forest md:hidden" />
@@ -15,10 +17,10 @@ export function MobileCtaBar() {
                 <div className="text-[10.5px] text-muted">登録不要・機能制限なし</div>
               </div>
               <a
-                href={APP_STORE_URL}
+                href={store.url}
                 className="inline-flex items-center rounded-xl bg-primary px-[18px] py-[11px] text-[13px] font-bold text-white hover:text-white"
               >
-                App Storeで入手
+                {store.label}
               </a>
             </>
           ) : (
