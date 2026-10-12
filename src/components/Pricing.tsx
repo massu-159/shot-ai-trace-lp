@@ -1,4 +1,4 @@
-import { APP_STORE_URL, IS_RELEASED } from '../constants'
+import { IS_RELEASED } from '../constants'
 import { plans } from '../data/plans'
 import { FadeIn } from './FadeIn'
 
@@ -54,7 +54,7 @@ export function Pricing() {
               </div>
               {IS_RELEASED ? (
                 <a
-                  href={APP_STORE_URL}
+                  href="#download"
                   className={`mt-7 inline-flex justify-center rounded-xl text-[14px] font-bold ${
                     plan.recommended
                       ? 'bg-primary py-3.5 text-white hover:text-white'
@@ -113,7 +113,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-5 px-5 text-center text-[clamp(10.5px,1.1vw,12px)] leading-[1.7] text-[#8a938c] md:px-12">
-          価格はApp Storeの表示に準拠します。サブスクリプションは自動更新され、App Storeの設定からいつでも解約できます。
+          価格は各ストア（App Store／Google Play）の表示に準拠します。サブスクリプションは自動更新され、App Store のサブスクリプション設定または Google Play の定期購入設定からいつでも解約できます。
         </p>
       </FadeIn>
     </div>

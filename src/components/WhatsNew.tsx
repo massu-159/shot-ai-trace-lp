@@ -2,7 +2,7 @@ import appLandscape from '../assets/app-landscape.webp'
 import { WHATS_NEW_VERSION, whatsNewItems } from '../data/whatsNew'
 import { FadeIn } from './FadeIn'
 
-/** v1.2 新機能セクション。スクショ1枚（横動画＋ルーペが写った編集画面）で2機能を訴求する。 */
+/** 新機能セクション（Android 版リリース＋v1.2 の新機能）。スクショは横動画＋ルーペが写った編集画面。 */
 export function WhatsNew() {
   return (
     <div id="whatsnew" className="mx-auto max-w-content pt-[clamp(56px,8vw,88px)]">
