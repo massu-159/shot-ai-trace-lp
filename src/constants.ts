@@ -8,6 +8,11 @@ export const APP_STORE_URL = 'https://apps.apple.com/jp/app/shot-ai-trace/id6790
 // Google Play 公開 URL（Android 版。日本のみ配信）
 export const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.shotaitrace.app'
 
+// 上の2つの URL は、ダウンロード欄の QR コード（src/assets/qr-app-store.svg・qr-google-play.svg）にも
+// 埋め込んでいる。URL を変えたら QR も作り直すこと（Python の segno で、誤り訂正 M・余白4モジュール）:
+//   segno.make(URL, error='m').save('src/assets/qr-….svg', border=4, dark='#111512', light='#ffffff',
+//                                    xmldecl=False, omitsize=True)
+
 // 最新情報の発信先（運営者のゴルフ特化アカウント）
 export const INSTAGRAM_URL = 'https://www.instagram.com/massu_golf.92/'
 
