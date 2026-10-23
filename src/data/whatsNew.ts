@@ -8,6 +8,10 @@ export const WHATS_NEW_VERSION = 'v1.2'
 
 export const whatsNewItems: WhatsNewItem[] = [
   {
+    title: 'Android 版をリリース',
+    body: 'Google Play で Android 版の配信を開始しました。iPhone 版と同じ機能・同じ料金プランで使えます（購入はストアごとのため、iPhone 版での購入は引き継がれません）。',
+  },
+  {
     title: '横向き動画に対応',
     body: '縦だけでなく、横向きで撮影したスイング動画もそのまま解析・編集・書き出しできるようになりました。',
   },
