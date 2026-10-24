@@ -9,7 +9,7 @@ export function UpdateBanner() {
         NEW
       </span>
       <span className="text-[13px] font-bold text-primary">
-        横動画対応＆拡大ルーペを追加しました →
+        続きから編集＆解析のキャンセルに対応しました →
       </span>
     </a>
   )
