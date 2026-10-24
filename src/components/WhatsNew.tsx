@@ -1,4 +1,4 @@
-import appLandscape from '../assets/app-landscape.webp'
+import appAnalyzing from '../assets/app-analyzing.webp'
 import { WHATS_NEW_VERSION, whatsNewItems } from '../data/whatsNew'
 import { FadeIn } from './FadeIn'
 
@@ -22,8 +22,8 @@ export function WhatsNew() {
         {/* PC: スクショ + 機能リストの2カラム */}
         <div className="hidden items-center gap-14 px-12 pt-11 md:grid md:grid-cols-[300px_1fr]">
           <img
-            src={appLandscape}
-            alt="横動画に弾道線と拡大ルーペを表示した編集画面"
+            src={appAnalyzing}
+            alt="解析中の画面。進み具合の下にキャンセルボタンがある"
             className="block w-[264px] justify-self-center rounded-[48px] shadow-[0_24px_48px_rgba(20,32,26,0.25)]"
           />
           <div className="flex max-w-[560px] flex-col gap-8">
@@ -44,8 +44,8 @@ export function WhatsNew() {
         {/* モバイル: スクショ → リストの縦積み */}
         <div className="px-5 pt-6 md:hidden">
           <img
-            src={appLandscape}
-            alt="横動画に弾道線と拡大ルーペを表示した編集画面"
+            src={appAnalyzing}
+            alt="解析中の画面。進み具合の下にキャンセルボタンがある"
             className="mx-auto block w-[180px] rounded-[28px] shadow-[0_18px_36px_rgba(20,32,26,0.25)]"
           />
           <div className="mt-6 flex flex-col overflow-hidden rounded-2xl border border-line">
