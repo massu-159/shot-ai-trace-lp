@@ -1,5 +1,5 @@
 import logoWhite from '../assets/logo-white.webp'
-import { APP_STORE_URL, IS_RELEASED } from '../constants'
+import { IS_RELEASED } from '../constants'
 
 const navItems = [
   { href: '#features', label: '機能' },
@@ -29,13 +29,14 @@ export function Header() {
             {item.label}
           </a>
         ))}
-        {/* モバイルは画面下部固定の CTA（MobileCtaBar）があるため md 以上でのみ表示 */}
+        {/* モバイルは画面下部固定の CTA（MobileCtaBar）があるため md 以上でのみ表示。
+            PC は両ストアのバッジを並べたダウンロード欄（FooterCta）へ移動する。 */}
         {IS_RELEASED ? (
           <a
-            href={APP_STORE_URL}
+            href="#download"
             className="hidden items-center rounded-full bg-primary px-[18px] py-[9px] text-[12.5px] font-bold text-white hover:text-white md:inline-flex"
           >
-            App Storeで入手
+            アプリを入手
           </a>
         ) : (
           <span className="hidden items-center rounded-full bg-line px-[18px] py-[9px] text-[12.5px] font-bold text-muted md:inline-flex">

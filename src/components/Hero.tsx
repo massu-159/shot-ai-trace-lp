@@ -2,6 +2,7 @@ import appHome from '../assets/app-home.webp'
 import appPreview from '../assets/app-preview.webp'
 import { INSTAGRAM_URL, IS_RELEASED } from '../constants'
 import { AppStoreBadge } from './AppStoreBadge'
+import { GooglePlayBadge } from './GooglePlayBadge'
 import { Header } from './Header'
 
 const snsBadges = ['Instagram Reels', 'TikTok', 'YouTube Shorts']
@@ -49,8 +50,9 @@ export function Hero() {
               </div>
             ))}
           </div>
-          <div className="mt-8 hidden items-center gap-4 md:flex">
-            <AppStoreBadge variant="dark" />
+          <div className="mt-8 hidden flex-wrap items-center gap-4 md:flex">
+            <AppStoreBadge className="h-[52px]" />
+            <GooglePlayBadge className="h-[52px]" />
             <a
               href="#pricing"
               className="inline-flex items-center rounded-[14px] border-[1.5px] border-ink px-6 py-[15px] text-[14px] font-bold text-ink hover:text-ink"
@@ -104,10 +106,10 @@ export function Hero() {
           />
           <div className="absolute right-0 bottom-0 left-0 h-[120px] bg-[linear-gradient(180deg,rgba(241,246,241,0)_0%,#f1f6f1_78%)]" />
           <div className="absolute right-0 bottom-4 left-0 flex flex-col items-center gap-2">
-            <AppStoreBadge
-              variant="dark"
-              className="px-[30px] shadow-[0_12px_28px_rgba(20,32,26,0.3)]"
-            />
+            <div className="flex items-center gap-3">
+              <AppStoreBadge />
+              <GooglePlayBadge />
+            </div>
             {!IS_RELEASED && (
               <a
                 href={INSTAGRAM_URL}

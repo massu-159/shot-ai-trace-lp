@@ -24,7 +24,7 @@ export const plans: Plan[] = [
     name: '買い切り',
     price: '¥3,000',
     priceNote: '一度きりのお支払い',
-    items: ['・書き出し 無制限', '・月額課金なし', '・他の端末へ購入を復元可能'],
+    items: ['・書き出し 無制限', '・月額課金なし', '・同じストアの他の端末へ復元可能'],
     cta: '買い切りで購入',
     recommended: true,
     badge: 'おすすめ・買い切り',
