@@ -23,6 +23,8 @@ npm run preview  # dist/ をローカル確認
 
 - `index.html` — LP本体（ヒーロー / 機能 / 使い方 / 料金 / FAQ / CTA）
 - `terms.html` / `privacy.html` / `tokushoho.html` — 規約系（App Store / Google Play 併記の正式文面）
+- `en/index.html` / `en/terms.html` / `en/privacy.html` — 英語版（法務文は英訳で、食い違うときは日本語版が優先。特定商取引法に基づく表記は日本語版のみ）
+- 文言は言語ごとに `src/data/ja/` と `src/data/en/`（トップは `index.ts` にまとめ、各セクションは `useContent()` で読む）。FAQ を変えたら、その言語の HTML の構造化データ（FAQPage）も同じ文面にする
 
 ## 運用メモ
 

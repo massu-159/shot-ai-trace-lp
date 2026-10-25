@@ -1,5 +1,8 @@
+import { useContent } from '../content'
+
 /** Hero 直下の新機能告知帯。タップで新機能セクション（#whatsnew）へスクロールする。 */
 export function UpdateBanner() {
+  const { updateBanner } = useContent()
   return (
     <a
       href="#whatsnew"
@@ -8,9 +11,7 @@ export function UpdateBanner() {
       <span className="rounded-full bg-primary px-2.5 py-[3px] text-[10px] font-black tracking-[0.08em] text-white">
         NEW
       </span>
-      <span className="text-[13px] font-bold text-primary">
-        60秒までの動画に対応しました →
-      </span>
+      <span className="text-[13px] font-bold text-primary">{updateBanner}</span>
     </a>
   )
 }

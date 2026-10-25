@@ -1,10 +1,4 @@
-export type Feature = {
-  complaint: string
-  headline: [string, string]
-  body: string
-  mobileComplaint: string
-  mobileAnswer: string
-}
+import type { Feature } from '../types'
 
 export const features: Feature[] = [
   {

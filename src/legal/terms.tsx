@@ -5,6 +5,7 @@ import { renderLegalPage } from './LegalPage'
 // ため、ストア固有の箇所以外は本ページと同一文面を維持すること。料金・回数の記載は
 // アプリの確定仕様（無料 累計5回 / 買い切り無制限 / サブスク 月10回・
 // 書き出し成功時のみ消費・無料枠→サブスク枠の順）と厳密に一致させる。
+// 英語版は en/terms.tsx（英訳。食い違うときは本ページが優先。第4条の価格はストアの表示による）。
 renderLegalPage('利用規約', [
   {
     heading: '第1条（適用）',
@@ -64,4 +65,4 @@ renderLegalPage('利用規約', [
       </>
     ),
   },
-])
+], { langLink: { href: 'en/terms.html', label: 'English', hrefLang: 'en' } })

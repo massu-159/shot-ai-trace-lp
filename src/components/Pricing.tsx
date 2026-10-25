@@ -1,8 +1,10 @@
 import { IS_RELEASED } from '../constants'
-import { plans } from '../data/plans'
+import { useContent } from '../content'
 import { FadeIn } from './FadeIn'
 
 export function Pricing() {
+  const { pricing, store } = useContent()
+  const plans = pricing.plans
   return (
     <div id="pricing" className="mx-auto max-w-content pt-[clamp(56px,8vw,96px)]">
       <FadeIn>
@@ -11,10 +13,10 @@ export function Pricing() {
             PRICING
           </div>
           <h2 className="mt-3.5 text-[clamp(24px,3.3vw,38px)] leading-[1.45] font-black text-ink">
-            シンプルな3プラン。機能差はありません。
+            {pricing.heading}
           </h2>
           <p className="mt-3 text-[clamp(12.5px,1.3vw,14.5px)] text-muted">
-            違いは書き出し回数だけ。まずは無料で5回試してください。
+            {pricing.sub}
           </p>
         </div>
 
@@ -69,7 +71,7 @@ export function Pricing() {
                     plan.recommended ? 'bg-line py-3.5' : 'border-[1.5px] border-line py-[13px]'
                   }`}
                 >
-                  Coming Soon（近日公開）
+                  {store.comingSoonLong}
                 </span>
               )}
             </div>
@@ -113,7 +115,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-5 px-5 text-center text-[clamp(10.5px,1.1vw,12px)] leading-[1.7] text-[#8a938c] md:px-12">
-          価格は各ストア（App Store／Google Play）の表示に準拠します。サブスクリプションは自動更新され、App Store のサブスクリプション設定または Google Play の定期購入設定からいつでも解約できます。
+          {pricing.note}
         </p>
       </FadeIn>
     </div>

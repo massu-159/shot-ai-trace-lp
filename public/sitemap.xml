@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- legal 3ページ（terms/privacy/tokushoho）は noindex のため含めない -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://massu-159.github.io/shot-ai-trace-lp/</loc>
     <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://massu-159.github.io/shot-ai-trace-lp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massu-159.github.io/shot-ai-trace-lp/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massu-159.github.io/shot-ai-trace-lp/en/" />
+  </url>
+  <url>
+    <loc>https://massu-159.github.io/shot-ai-trace-lp/en/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://massu-159.github.io/shot-ai-trace-lp/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massu-159.github.io/shot-ai-trace-lp/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massu-159.github.io/shot-ai-trace-lp/en/" />
   </url>
 </urlset>
