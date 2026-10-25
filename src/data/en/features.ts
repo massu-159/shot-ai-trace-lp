@@ -2,24 +2,24 @@ import type { Feature } from '../types'
 
 export const features: Feature[] = [
   {
-    complaint: 'Common complaint: The trace misses the ball',
-    headline: ['AI hears the strike', 'and pinpoints impact.'],
-    body: 'Instead of relying on the picture alone, it finds the moment of impact from the sound of the strike and traces from there. You can fine-tune the trace in the editor before saving.',
+    complaint: 'Sound familiar? The trace misses the ball',
+    headline: ['It hears the strike', 'and nails impact.'],
+    body: 'Instead of guessing from the picture alone, it finds the exact moment of impact from the sound of the strike and traces from there. Fine-tune the trace in the editor before you save.',
     mobileComplaint: '✕ The trace misses the ball',
-    mobileAnswer: '→ AI finds impact from the sound of the strike',
+    mobileAnswer: '→ It hears the strike and nails impact',
   },
   {
-    complaint: 'Common complaint: Shaky video ruins the trace',
-    headline: ['Camera shake, corrected.', 'Handheld shots stay on track.'],
-    body: 'Camera shake and zoom are corrected automatically, so the trace sticks to the scenery. Works with videos shot handheld.',
-    mobileComplaint: '✕ Shaky video ruins the trace',
-    mobileAnswer: '→ Shake is corrected automatically. Shoot handheld',
+    complaint: 'Sound familiar? Shaky video wrecks the trace',
+    headline: ['Shaky hands? No problem.', 'The trace stays locked in.'],
+    body: 'Camera shake and zoom are corrected automatically, so the trace sticks to the scenery. Just shoot handheld.',
+    mobileComplaint: '✕ Shaky video wrecks the trace',
+    mobileAnswer: '→ Shake gets corrected. Shoot handheld',
   },
   {
-    complaint: 'Common complaint: Useless until you pay',
-    headline: ['Every feature, free for 5 saves.', 'Buy only once you’re sold.'],
-    body: 'Every plan has the same features. The only difference is how many videos you can save. Try it free, then choose Lifetime or the lighter Monthly plan.',
-    mobileComplaint: '✕ Useless until you pay',
-    mobileAnswer: '→ Every feature free for 5 saves. Buy when you’re sold',
+    complaint: 'Sound familiar? It’s all behind a paywall',
+    headline: ['Every feature, free for 5 saves.', 'Pay only once you’re sold.'],
+    body: 'Every plan gets the same features. The only difference is how many videos you can save. Try it free, then go Lifetime or pick the lighter Monthly plan.',
+    mobileComplaint: '✕ It’s all behind a paywall',
+    mobileAnswer: '→ All features, 5 free saves. Then decide',
   },
 ]

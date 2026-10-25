@@ -11,7 +11,8 @@ import { whatsNewItems } from './whatsNew'
 /**
  * 英語のトップページ（/en/）の文言。日本語版（../ja/index.ts）と同じ構成にする。
  * 用語はアプリの英語版にそろえる（Save・saves left・Filming tips・Lifetime / Monthly・
- * Camera Roll / Gallery・Shot shape: Curves right / Curves left）。
+ * Camera Roll / Gallery・Shot shape: Curves right / Curves left・Vertical / horizontal）。
+ * 日本語の直訳にせず、英語のゴルファー向けの言い回しにする（規約・解約の注記は平易な英語）。
  * 価格は国ごとに違うため金額を書かず、各ストアの表示を案内する。
  */
 export const en: Content = {
@@ -44,39 +45,39 @@ export const en: Content = {
   },
   hero: {
     snsBadges: ['Instagram Reels', 'TikTok', 'YouTube Shorts'],
-    title: ['See your', 'ball flight.'],
-    lead: 'Just pick a video you’ve shot. AI finds the moment of impact from the sound of the strike and draws the ball-flight trace for you. Post it to social media at the original framing and quality.',
+    title: ['Every shot,', 'traced.'],
+    lead: 'Pick a swing video you’ve already shot. The AI hears the strike, finds impact, and draws your ball flight for you. Then post it to Reels, TikTok, or Shorts in the original framing and quality.',
     checkPoints: [
-      'AI listens for impact, so the trace stays on the ball',
-      'Analyzed on your device. No upload wait, and your video stays on your phone',
-      '5 free saves, then Monthly or Lifetime',
+      'AI listens for the strike, so the trace starts right on the ball',
+      'Runs on your phone. No upload wait, and your video never leaves it',
+      'First 5 saves free, then go Monthly or Lifetime',
     ],
-    mobileChips: ['Impact from sound', 'On-device', '5 free saves'],
+    mobileChips: ['Hears impact', 'On-device', '5 free saves'],
     seePricing: 'See pricing',
     previewAlt: 'Preview screen with a ball-flight trace drawn',
     homeAlt: 'Shot AI Trace home screen',
-    followBefore: 'Get updates on',
+    followBefore: 'Follow along on',
     followAfter: '',
-    followMobile: 'Get updates on Instagram',
+    followMobile: 'Follow along on Instagram',
   },
-  updateBanner: 'Now supports videos up to 60 seconds →',
+  updateBanner: 'Now handles videos up to 60 seconds →',
   features: {
-    heading: ['Common shot tracer frustrations,', 'solved by design.'],
+    heading: ['Shot tracer headaches?', 'Fixed from the ground up.'],
     items: features,
   },
   whatsNew: {
-    heading: 'Updated and easier to use.',
+    heading: 'Better with every update.',
     version: WHATS_NEW_VERSION,
     demoAlt: 'Playback of a saved video with the ball-flight trace extending from the struck ball',
     items: whatsNewItems,
   },
   howTo: {
-    heading: 'Three simple steps.',
+    heading: 'Three steps. That’s it.',
     steps,
     dotLabel: (n) => `Show step ${n}`,
   },
   pricing: {
-    heading: 'Three simple plans. Same features on every one.',
+    heading: 'Three plans. Every feature on all of them.',
     sub: 'The only difference is how many videos you can save. Start with 5 free saves.',
     plans,
     note: 'Prices vary by country. See the App Store or Google Play for the price in your country. The subscription renews automatically and can be canceled anytime in your App Store or Google Play subscription settings.',
@@ -86,8 +87,8 @@ export const en: Content = {
     items: faqs,
   },
   footer: {
-    heading: ['From your next round,', 'keep every ball flight.'],
-    sub: 'Your first 5 saves are free. No sign-up required.',
+    heading: ['Tee it up next round', 'and keep every ball flight.'],
+    sub: 'Your first 5 saves are on us. No sign-up needed.',
     qrAlt: (store) => `QR code for the ${store} download page`,
     qrCaption: 'Scan with your phone',
     legalLinks: [
@@ -103,8 +104,8 @@ export const en: Content = {
     ],
   },
   mobileCta: {
-    title: 'Try 5 saves free',
+    title: 'Try it free: 5 saves',
     sub: 'No sign-up · Every feature',
-    comingSoonSub: 'Get updates on Instagram',
+    comingSoonSub: 'Follow along on Instagram',
   },
 }

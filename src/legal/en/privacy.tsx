@@ -48,8 +48,8 @@ renderLegalPage(
       body: (
         <>
           <p>
-            Your export usage and the App's settings (such as shot shape and watermark display) are
-            stored in an encrypted area on your device (on iOS, the Keychain; on Android, an area
+            The number of saves you have used and the App's settings (such as shot shape and
+            watermark display) are stored in an encrypted area on your device (on iOS, the Keychain; on Android, an area
             encrypted with a key in the Android Keystore). This information is never sent to the
             servers of the Operator or of any third party. On iOS, this information may be included
             in device backups through the OS backup feature, and it may remain on the device even
