@@ -55,7 +55,7 @@ function PhoneDemo({ className }: { className: string }) {
   )
 }
 
-/** 新機能セクション（Android 版リリース＋v1.3 の新機能）。端末の枠の中で弾道線の動画を流す。 */
+/** 新機能セクション（Android 版リリース＋v1.3〜v1.3.1 の新機能）。端末の枠の中で弾道線の動画を流す。 */
 export function WhatsNew() {
   return (
     <div id="whatsnew" className="mx-auto max-w-content pt-[clamp(56px,8vw,88px)]">

@@ -1,4 +1,4 @@
-import appHome from '../assets/app-home.webp'
+import appEdit from '../assets/app-edit.webp'
 import appPreview from '../assets/app-preview.webp'
 import { INSTAGRAM_URL, IS_RELEASED } from '../constants'
 import { AppStoreBadge } from './AppStoreBadge'
@@ -85,8 +85,8 @@ export function Hero() {
             className="absolute top-11 left-0 block w-[264px] -rotate-4 rounded-[48px] shadow-[0_24px_48px_rgba(20,32,26,0.25)]"
           />
           <img
-            src={appHome}
-            alt="Shot AI Trace ホーム画面"
+            src={appEdit}
+            alt="線の点をドラッグして、弾道の高さや落下地点を直す編集画面"
             className="absolute top-0 right-[6px] block w-[280px] rotate-3 rounded-[48px] shadow-[0_30px_60px_rgba(20,32,26,0.32)]"
           />
         </div>
@@ -100,8 +100,8 @@ export function Hero() {
           />
           {/* rotate-4 で上端が持ち上がるため、overflow-hidden に切られない分の余白を上に取る */}
           <img
-            src={appHome}
-            alt="Shot AI Trace ホーム画面"
+            src={appEdit}
+            alt="線の点をドラッグして、弾道の高さや落下地点を直す編集画面"
             className="absolute top-2 right-[52px] block w-[172px] rotate-4 rounded-[22px] shadow-[0_20px_44px_rgba(20,32,26,0.3)]"
           />
           <div className="absolute right-0 bottom-0 left-0 h-[120px] bg-[linear-gradient(180deg,rgba(241,246,241,0)_0%,#f1f6f1_78%)]" />

@@ -4,9 +4,13 @@ export type WhatsNewItem = {
 }
 
 /** 新機能セクションと告知バナーが参照するアプリバージョン表記。 */
-export const WHATS_NEW_VERSION = 'v1.3'
+export const WHATS_NEW_VERSION = 'v1.3.1'
 
 export const whatsNewItems: WhatsNewItem[] = [
+  {
+    title: '60秒までの動画に対応',
+    body: '選べる動画を、60秒以内・600MB以下まで広げました。打つ前に待ち時間がある長めの動画でも、打球音を見つけて弾道線を描きます。',
+  },
   {
     title: 'Android 版をリリース',
     body: 'Google Play で Android 版の配信を開始しました。iPhone 版と同じ機能・同じ料金プランで使えます（購入はストアごとのため、iPhone 版での購入は引き継がれません）。',
