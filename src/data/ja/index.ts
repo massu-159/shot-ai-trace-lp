@@ -1,3 +1,5 @@
+import appHome from '../../assets/app-home.webp'
+import appPreview from '../../assets/app-preview.webp'
 import badgeAppStore from '../../assets/badge-app-store-ja.svg'
 import badgeGooglePlay from '../../assets/badge-google-play-ja.png'
 import type { Content } from '../types'
@@ -45,7 +47,9 @@ export const ja: Content = {
     ],
     mobileChips: ['打球音AI検出', '端末内解析', '無料5回'],
     seePricing: '料金を見る',
+    previewImage: appPreview,
     previewAlt: '弾道線を描画したプレビュー画面',
+    homeImage: appHome,
     homeAlt: 'Shot AI Trace ホーム画面',
     followBefore: '最新情報は',
     followAfter: 'で',

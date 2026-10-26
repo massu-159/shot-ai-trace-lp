@@ -82,7 +82,10 @@ export type Content = {
     checkPoints: string[]
     mobileChips: string[]
     seePricing: string
+    /** トップの端末画像（言語ごとに、その言語のアプリ画面を撮ったもの） */
+    previewImage: string
     previewAlt: string
+    homeImage: string
     homeAlt: string
     /** リリース前のフォロー導線「{before} Instagram {after}」 */
     followBefore: string

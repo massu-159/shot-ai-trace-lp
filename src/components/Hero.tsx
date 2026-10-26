@@ -1,5 +1,3 @@
-import appHome from '../assets/app-home.webp'
-import appPreview from '../assets/app-preview.webp'
 import { INSTAGRAM_URL, IS_RELEASED } from '../constants'
 import { useContent } from '../content'
 import { AppStoreBadge } from './AppStoreBadge'
@@ -77,12 +75,12 @@ export function Hero() {
         {/* PC版ビジュアル */}
         <div className="relative hidden h-[600px] md:block">
           <img
-            src={appPreview}
+            src={hero.previewImage}
             alt={hero.previewAlt}
             className="absolute top-11 left-0 block w-[264px] -rotate-4 rounded-[48px] shadow-[0_24px_48px_rgba(20,32,26,0.25)]"
           />
           <img
-            src={appHome}
+            src={hero.homeImage}
             alt={hero.homeAlt}
             className="absolute top-0 right-[6px] block w-[280px] rotate-3 rounded-[48px] shadow-[0_30px_60px_rgba(20,32,26,0.32)]"
           />
@@ -91,13 +89,13 @@ export function Hero() {
         {/* モバイル版ビジュアル（フェード＋バッジ重ね） */}
         <div className="relative mt-[22px] h-[400px] overflow-hidden md:hidden">
           <img
-            src={appPreview}
+            src={hero.previewImage}
             alt={hero.previewAlt}
             className="absolute top-9 left-[46px] block w-[150px] -rotate-5 rounded-[22px] shadow-[0_18px_36px_rgba(20,32,26,0.25)]"
           />
           {/* rotate-4 で上端が持ち上がるため、overflow-hidden に切られない分の余白を上に取る */}
           <img
-            src={appHome}
+            src={hero.homeImage}
             alt={hero.homeAlt}
             className="absolute top-2 right-[52px] block w-[172px] rotate-4 rounded-[22px] shadow-[0_20px_44px_rgba(20,32,26,0.3)]"
           />

@@ -1,3 +1,5 @@
+import appHome from '../../assets/app-home-en.webp'
+import appPreview from '../../assets/app-preview-en.webp'
 import badgeAppStore from '../../assets/badge-app-store-en.svg'
 import badgeGooglePlay from '../../assets/badge-google-play-en.png'
 import { WHATS_NEW_VERSION } from '../ja/whatsNew'
@@ -54,7 +56,9 @@ export const en: Content = {
     ],
     mobileChips: ['Hears impact', 'On-device', '5 free saves'],
     seePricing: 'See pricing',
+    previewImage: appPreview,
     previewAlt: 'Preview screen with a ball-flight trace drawn',
+    homeImage: appHome,
     homeAlt: 'Shot AI Trace home screen',
     followBefore: 'Follow along on',
     followAfter: '',
