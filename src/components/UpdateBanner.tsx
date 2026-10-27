@@ -9,7 +9,7 @@ export function UpdateBanner() {
         NEW
       </span>
       <span className="text-[13px] font-bold text-primary">
-        続きから編集＆解析のキャンセルに対応しました →
+        60秒までの動画に対応しました →
       </span>
     </a>
   )
