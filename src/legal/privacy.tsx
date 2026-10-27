@@ -4,6 +4,8 @@ import { renderLegalPage } from './LegalPage'
 // 利用状況データの送信は Android・iOS とも実機で確認済み）/ 2026-10-21 改定（編集中の作業の一時保存と、クラッシュ・エラー情報の送信（Sentry）を追記）/ 2026-10-23 改定（IP アドレスから推定される地域も保存しない旨を明記）。
 // アプリ内（shot-ai-trace-frontend の app/settings/privacy.tsx）は OS ごとの文面を
 // 表示するため、内容（項目・事実）を本ページと一致させること。
+// 英語版は en/privacy.tsx（英訳。食い違うときは本ページが優先）。Google Play はプライバシー
+// ポリシーの URL を1つしか持てないため、本ページの冒頭に英語版への案内を置く。
 renderLegalPage('プライバシーポリシー', [
   {
     heading: '本ポリシーについて',
@@ -127,4 +129,13 @@ renderLegalPage('プライバシーポリシー', [
       </>
     ),
   },
-])
+], {
+  intro: (
+    <p lang="en">
+      English version:{' '}
+      <a href="en/privacy.html" hrefLang="en" className="font-bold underline">
+        Privacy Policy (English)
+      </a>
+    </p>
+  ),
+})
