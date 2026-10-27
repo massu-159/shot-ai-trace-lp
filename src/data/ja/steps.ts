@@ -1,8 +1,4 @@
-export type Step = {
-  label: string
-  title: string
-  body: string
-}
+import type { Step } from '../types'
 
 export const steps: Step[] = [
   {

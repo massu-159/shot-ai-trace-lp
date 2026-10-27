@@ -1,10 +1,15 @@
 import { INSTAGRAM_URL, IS_RELEASED, storeForUserAgent } from '../constants'
+import { useContent } from '../content'
 
 // モバイルのみ: 下部固定CTAバー（スペーサ込み）。
 // リリース前は Coming Soon 表示＋Instagram フォロー導線に切り替える。
 // ボタンは閲覧端末に合わせて Google Play（Android）／App Store（それ以外）へ出し分ける。
 export function MobileCtaBar() {
-  const store = storeForUserAgent(navigator.userAgent)
+  const { store: labels, mobileCta } = useContent()
+  const store = storeForUserAgent(navigator.userAgent, {
+    appStore: labels.appStoreCta,
+    googlePlay: labels.googlePlayCta,
+  })
   return (
     <>
       <div className="h-[88px] bg-forest md:hidden" />
@@ -13,8 +18,8 @@ export function MobileCtaBar() {
           {IS_RELEASED ? (
             <>
               <div className="text-left">
-                <div className="text-[12.5px] font-bold text-ink">無料で5回試せます</div>
-                <div className="text-[10.5px] text-muted">登録不要・機能制限なし</div>
+                <div className="text-[12.5px] font-bold text-ink">{mobileCta.title}</div>
+                <div className="text-[10.5px] text-muted">{mobileCta.sub}</div>
               </div>
               <a
                 href={store.url}
@@ -26,8 +31,8 @@ export function MobileCtaBar() {
           ) : (
             <>
               <div className="text-left">
-                <div className="text-[12.5px] font-bold text-ink">Coming Soon（近日公開）</div>
-                <div className="text-[10.5px] text-muted">最新情報は Instagram で</div>
+                <div className="text-[12.5px] font-bold text-ink">{labels.comingSoonLong}</div>
+                <div className="text-[10.5px] text-muted">{mobileCta.comingSoonSub}</div>
               </div>
               <a
                 href={INSTAGRAM_URL}

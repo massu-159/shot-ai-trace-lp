@@ -14,7 +14,8 @@ export default defineConfig({
         terms: resolve(__dirname, 'terms.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         tokushoho: resolve(__dirname, 'tokushoho.html'),
-        // 英語版（特定商取引法に基づく表記は日本語版のみ。英語のトップ /en/ はアプリ 1.3.1 の公開後に足す）
+        // 英語版（特定商取引法に基づく表記は日本語版のみ）
+        en: resolve(__dirname, 'en/index.html'),
         enTerms: resolve(__dirname, 'en/terms.html'),
         enPrivacy: resolve(__dirname, 'en/privacy.html'),
       },

@@ -1,7 +1,4 @@
-export type WhatsNewItem = {
-  title: string
-  body: string
-}
+import type { WhatsNewItem } from '../types'
 
 /** 新機能セクションと告知バナーが参照するアプリバージョン表記。 */
 export const WHATS_NEW_VERSION = 'v1.3.1'

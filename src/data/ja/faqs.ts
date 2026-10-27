@@ -1,7 +1,4 @@
-export type Faq = {
-  question: string
-  answer: string
-}
+import type { Faq } from '../types'
 
 export const faqs: Faq[] = [
   {

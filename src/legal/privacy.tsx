@@ -130,6 +130,7 @@ renderLegalPage('プライバシーポリシー', [
     ),
   },
 ], {
+  langLink: { href: 'en/privacy.html', label: 'English', hrefLang: 'en' },
   intro: (
     <p lang="en">
       English version:{' '}

@@ -65,4 +65,4 @@ renderLegalPage('利用規約', [
       </>
     ),
   },
-])
+], { langLink: { href: 'en/terms.html', label: 'English', hrefLang: 'en' } })

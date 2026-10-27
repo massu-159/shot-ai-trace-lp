@@ -67,8 +67,6 @@ renderLegalPage(
   ],
   {
     lang: 'en',
-    // 英語版のトップ（/en/）はアプリ 1.3.1 の公開後に足す（PR #10）。それまでは日本語のトップへ戻す。
-    home: { href: '../', label: '← Home' },
     langLink: { href: '../terms.html', label: '日本語', hrefLang: 'ja' },
     intro: (
       <p>

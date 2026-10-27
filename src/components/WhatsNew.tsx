@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import phoneFrame from '../assets/phone-frame.webp'
 import traceDemo from '../assets/trace-demo.mp4'
 import traceDemoPoster from '../assets/trace-demo-poster.webp'
-import { WHATS_NEW_VERSION, whatsNewItems } from '../data/whatsNew'
+import { useContent } from '../content'
 import { FadeIn } from './FadeIn'
 
 /**
@@ -11,6 +11,7 @@ import { FadeIn } from './FadeIn'
  * PC 用とスマホ用のうち隠れている方は読み込まない。視差効果を減らす設定ではポスター（線を描き終えた場面）のまま。
  */
 function PhoneDemo({ className }: { className: string }) {
+  const { whatsNew } = useContent()
   const ref = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -48,7 +49,7 @@ function PhoneDemo({ className }: { className: string }) {
       />
       <img
         src={phoneFrame}
-        alt="打ったボールに弾道線が伸びていく、書き出した動画の再生画面"
+        alt={whatsNew.demoAlt}
         className="relative block w-full"
       />
     </div>
@@ -57,6 +58,8 @@ function PhoneDemo({ className }: { className: string }) {
 
 /** 新機能セクション（Android 版リリース＋v1.3〜v1.3.1 の新機能）。端末の枠の中で弾道線の動画を流す。 */
 export function WhatsNew() {
+  const { whatsNew } = useContent()
+  const whatsNewItems = whatsNew.items
   return (
     <div id="whatsnew" className="mx-auto max-w-content pt-[clamp(56px,8vw,88px)]">
       <FadeIn>
@@ -65,9 +68,9 @@ export function WhatsNew() {
             WHAT&apos;S NEW
           </div>
           <h2 className="mt-3.5 text-[clamp(24px,3.3vw,38px)] leading-[1.45] font-black text-ink">
-            アップデートで、さらに使いやすく。
+            {whatsNew.heading}
             <span className="ml-3 inline-block translate-y-[-2px] rounded-full bg-mint px-3 py-[5px] align-middle text-[13px] font-bold text-primary">
-              {WHATS_NEW_VERSION}
+              {whatsNew.version}
             </span>
           </h2>
         </div>

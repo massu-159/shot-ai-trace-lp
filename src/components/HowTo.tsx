@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import { steps } from '../data/steps'
+import { useContent } from '../content'
+import type { Step } from '../data/types'
 import { FadeIn } from './FadeIn'
 
 // モバイルスライダーの寸法。GAP は track の gap-3（12px）・SLIDE_RATIO は
@@ -9,7 +10,7 @@ const SLIDE_RATIO = 0.8
 // この距離（px）以上ドラッグして離すと1枚送る。
 const SWIPE_THRESHOLD = 50
 
-function StepCardBody({ step }: { step: (typeof steps)[number] }) {
+function StepCardBody({ step }: { step: Step }) {
   return (
     <>
       <div className="font-display text-[clamp(12px,1.2vw,14px)] font-bold text-primary">
@@ -22,6 +23,8 @@ function StepCardBody({ step }: { step: (typeof steps)[number] }) {
 }
 
 export function HowTo() {
+  const { howTo } = useContent()
+  const steps = howTo.steps
   // モバイルは自由スクロールではなく「必ず1枚がセンターに止まる」ページャー。
   // ネイティブスクロールを使わず、active インデックス + translateX で位置を決める。
   const viewportRef = useRef<HTMLDivElement>(null)
@@ -89,7 +92,7 @@ export function HowTo() {
             HOW IT WORKS
           </div>
           <h2 className="mt-3.5 text-[clamp(24px,3.3vw,38px)] font-black text-ink">
-            使い方は、3ステップ。
+            {howTo.heading}
           </h2>
         </div>
 
@@ -126,7 +129,7 @@ export function HowTo() {
             <button
               key={step.label}
               type="button"
-              aria-label={`ステップ${index + 1}を表示`}
+              aria-label={howTo.dotLabel(index + 1)}
               onClick={() => go(index)}
               className={`size-2 rounded-full transition-colors ${
                 index === active ? 'bg-primary' : 'bg-[#d9e2da]'

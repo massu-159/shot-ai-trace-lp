@@ -16,12 +16,6 @@ type Options = {
   langLink?: LangLink
   /** 見出しの直下に置く1段落（英訳の断り書き・英語版への案内など） */
   intro?: ReactNode
-  /**
-   * ロゴと戻るリンクの行き先・文言（既定は同じ階層のトップ「./」と言語ごとの戻る文言）。
-   * 英語版のトップ（/en/）がまだ無いあいだ、英語の法務ページは日本語のトップへ戻す。
-   * 英語の行き先・文言は en/privacy.tsx・en/terms.tsx で渡す。
-   */
-  home?: { href: string; label: string }
 }
 
 type Props = Options & {
@@ -34,13 +28,12 @@ const backLabel: Record<Lang, string> = {
   en: '← Back to top',
 }
 
-function LegalLayout({ title, sections, lang = 'ja', langLink, intro, home }: Props) {
-  const homeHref = home?.href ?? './'
+function LegalLayout({ title, sections, lang = 'ja', langLink, intro }: Props) {
   return (
     <div className="min-h-screen bg-white">
       <div className="flex items-center justify-between px-5 py-4 md:px-12 md:py-[22px]">
         {/* ヘッダーのロゴ・タイトルはトップページ（Header.tsx）と同じ組。 */}
-        <a href={homeHref} className="flex items-center gap-[10px]">
+        <a href="./" className="flex items-center gap-[10px]">
           <span className="inline-flex size-9 items-center justify-center rounded-[6px] bg-ink">
             <img src={logoWhite} alt="" className="size-9" />
           </span>
@@ -52,16 +45,13 @@ function LegalLayout({ title, sections, lang = 'ja', langLink, intro, home }: Pr
               href={langLink.href}
               hrefLang={langLink.hrefLang}
               lang={langLink.hrefLang}
-              className="whitespace-nowrap rounded-full border border-[#d9e2da] px-3 py-[6px] text-[12px] font-medium text-muted hover:text-ink"
+              className="rounded-full border border-[#d9e2da] px-3 py-[6px] text-[12px] font-medium text-muted hover:text-ink"
             >
               {langLink.label}
             </a>
           )}
-          <a
-            href={homeHref}
-            className="whitespace-nowrap text-[13.5px] font-medium text-muted hover:text-muted"
-          >
-            {home?.label ?? backLabel[lang]}
+          <a href="./" className="text-[13.5px] font-medium text-muted hover:text-muted">
+            {backLabel[lang]}
           </a>
         </div>
       </div>

@@ -1,15 +1,4 @@
-export type Plan = {
-  name: string
-  price: string
-  priceSuffix?: string
-  priceNote: string
-  items: string[]
-  cta: string
-  recommended?: boolean
-  badge?: string
-  mobileNote: string
-  mobileBadge?: string
-}
+import type { Plan } from '../types'
 
 export const plans: Plan[] = [
   {
