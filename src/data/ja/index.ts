@@ -56,7 +56,7 @@ export const ja: Content = {
     followAfter: 'で',
     followMobile: '最新情報は Instagram で',
   },
-  updateBanner: '60秒までの動画に対応しました →',
+  updateBanner: '見せ方に「輪」が加わりました →',
   features: {
     heading: ['ゴルフ弾道トレーサーアプリの「不満」を、', '設計から解決しました。'],
     items: features,

@@ -65,7 +65,7 @@ export const en: Content = {
     followAfter: '',
     followMobile: 'Follow along on Instagram',
   },
-  updateBanner: 'Now handles videos up to 60 seconds →',
+  updateBanner: 'New: the Ring effect →',
   features: {
     heading: ['Shot tracer headaches?', 'Fixed from the ground up.'],
     items: features,
