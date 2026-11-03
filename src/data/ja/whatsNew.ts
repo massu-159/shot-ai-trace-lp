@@ -1,9 +1,13 @@
 import type { WhatsNewItem } from '../types'
 
 /** 新機能セクションと告知バナーが参照するアプリバージョン表記。 */
-export const WHATS_NEW_VERSION = 'v1.3.1'
+export const WHATS_NEW_VERSION = 'v1.4.0'
 
 export const whatsNewItems: WhatsNewItem[] = [
+  {
+    title: '見せ方に「輪」を追加',
+    body: '線の代わりに、輪が弾道に沿って飛んでいきます。遠くへ行くほど小さくなるので、奥行きが出ます。編集画面の「見せ方」から選べます。',
+  },
   {
     title: '60秒までの動画に対応',
     body: '選べる動画を、60秒以内・600MB以下まで広げました。打つ前に待ち時間がある長めの動画でも、打球音を見つけて弾道線を描きます。',

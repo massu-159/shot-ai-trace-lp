@@ -2,6 +2,10 @@ import type { WhatsNewItem } from '../types'
 
 export const whatsNewItems: WhatsNewItem[] = [
   {
+    title: 'New effect: Ring',
+    body: 'Instead of a line, a ring rides your ball flight and shrinks as the ball heads downrange. Find it under “Effect” in the editor.',
+  },
+  {
     title: 'Videos up to 60 seconds',
     body: 'You can now pick videos up to 60 seconds and 600 MB. Even in longer clips with some waiting around before the swing, the app finds the strike and draws the trace.',
   },
